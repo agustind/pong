@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="favicon.png" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | LOVEKRAVT_WEB</title>
+  </head>
+  <body style="padding:0; margin:0; overflow:hidden">
+    <canvas id="unity-canvas" width=100% height=100%  style="position:absolute; width: 100%; height: 100%; background: #2a1e31"></canvas>
+    <script src="Build/lovekravt_webgl.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/lovekravt_webgl.data",
+        frameworkUrl: "Build/lovekravt_webgl.framework.js",
+        codeUrl: "Build/lovekravt_webgl.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "LOVEKRAVT",
+        productName: "LOVEKRAVT_WEB",
+        productVersion: "0.1",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>
